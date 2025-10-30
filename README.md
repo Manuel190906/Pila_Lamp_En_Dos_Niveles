@@ -50,7 +50,7 @@ Pila_Lamp_En_Dos_Niveles/
     apache.vm.network "public_network", bridge: "enp0s3"
   end
   #Vamos a configurar la maquina mysql.
-
+  #Importante una vez actualizados todos los repositorio y los paquetes quitarle el acceso a internet a la maquina.!!!!
   config.vm.define "ManuelMysql" do |mysql|
     mysql.vm.box = "debian/bookworm64"
     mysql.vm.hostname = "ManuelMysql"
@@ -79,6 +79,8 @@ systemctl restart apache2
 ```
 
 ---
+![Prueba de servidor](Imagenes/intalacionapache.png)
+
 
 ## ⚙️ Mysql.sh
 
@@ -103,6 +105,8 @@ EOF
 ```
 
 ---
+![Prueba de servidor](Imagenes/intalaciónmysql.png)
+
 
 ## 🖥️ Servidor Apache
 
@@ -120,21 +124,20 @@ Para acceder desde el host:
 apache.vm.network "forwarded_port", guest: 80, host: 8080
 apache.vm.network "private_network", ip: "192.168.33.5"
 ```
-
 ---
+
+Aquí se podrá observar como el servidor apache esta totalmente activo y funcionando
+![Prueba de servidor](Imagenes/estadoapache.png)
 
 ## 🖼️ Capturas de pantalla
 
 🔹 **Apache funcionando**  
 Acceso exitoso al servidor web desde http://localhost:8080  
-
+![Conexión MySQL](Imagenes/apache_check.png)  
 🔹 **MySQL funcionando**  
 Servicio activo y base de datos `gestion_usuarios` creada correctamente.  
-
-![Diagrama de la infraestructura](Imagenes/BBDD_CHECK.png)  
-![Aprovisionamiento](Imagenes/accesoapache.png)  
-![Conexión MySQL](Imagenes/apache_check.png)  
-![Prueba de servidor](Imagenes/estadoapache.png)
-![Prueba de servidor](Imagenes/intalacionapache.png)
-![Prueba de servidor](Imagenes/intalaciónmysql.png)
 ![Prueba de servidor](Imagenes/mariadb.png)
+
+
+![Diagrama de la infraestructura](Imagenes/BBDD_CEHCK.png)  
+
