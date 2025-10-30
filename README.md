@@ -136,5 +136,5 @@ Servicio activo y base de datos `gestion_usuarios` creada correctamente.
 ![Conexión MySQL](Imagenes/apache_check.png)  
 ![Prueba de servidor](Imagenes/estadoapache.png)
 ![Prueba de servidor](Imagenes/intalacionapache.png)
-![Prueba de servidor](Imagenes/pintalaciónmysql.png)
-![Prueba de servidor](Imagenes/pmariadb.png)
+![Prueba de servidor](Imagenes/intalaciónmysql.png)
+![Prueba de servidor](Imagenes/mariadb.png)
