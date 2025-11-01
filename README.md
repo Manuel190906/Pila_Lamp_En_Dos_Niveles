@@ -50,14 +50,14 @@ Pila_Lamp_En_Dos_Niveles/
     apache.vm.network "public_network", bridge: "enp0s3"
   end
   #Vamos a configurar la maquina mysql.
-  #Importante una vez actualizados todos los repositorio y los paquetes quitarle el acceso a internet a la maquina.!!!!
-  config.vm.define "ManuelMysql" do |mysql|
+
+    config.vm.define "ManuelMysql" do |mysql|
     mysql.vm.box = "debian/bookworm64"
     mysql.vm.hostname = "ManuelMysql"
+    mysql.vm.network "forwarded_port", guest: 3306, host: 8081
+    mysql.vm.network "forwarded_port", guest: 80, host: 8082
     mysql.vm.network "private_network", ip: "192.168.33.6"
     mysql.vm.provision "shell", path: "Mysql.sh"
-    #Una vez echo la creación de las maquinas quitar el public_network
-    mysql.vm.network "public_network"
   end
 
 ```
