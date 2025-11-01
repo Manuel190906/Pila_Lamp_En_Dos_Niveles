@@ -137,7 +137,7 @@ Acceso exitoso al servidor web desde http://localhost:8080
 🔹 **MySQL funcionando**  
 Servicio activo y base de datos `gestion_usuarios` creada correctamente.  
 ![Prueba de servidor](Imagenes/mariadb.png)
-
+![phpmyadmin funcionando](Imagenes/phpmyadmin.png)
 
 ![Diagrama de la infraestructura](Imagenes/BBDD_CEHCK.png)  
 
